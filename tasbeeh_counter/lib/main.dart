@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:tasbeeh_counter/Utils_/Routes/Routes.dart';
+
+import 'package:tasbeeh_counter/Utils_/Routes/Routes_name.dart';
 import 'package:tasbeeh_counter/View_Model/TasbCount_Provider.dart';
 
 
@@ -24,18 +27,18 @@ class MyApp extends StatelessWidget {
             builder: (BuildContext context) {
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'To do App',
+                title: 'Tasbeeh Counter',
                 theme: ThemeData(
                   applyElevationOverlayColor: true,
                   brightness: Brightness.light,
-                  appBarTheme: AppBarTheme(color: Colors.deepPurple),
+                  appBarTheme: AppBarTheme(color: Colors.blue),
                   primarySwatch: Colors.blue,
                   textTheme: Typography.englishLike2018.apply(
                     fontSizeFactor: 1.sp,
                   ),
                 ),
-                // initialRoute: Routesname.Splash,
-                // onGenerateRoute: Routes.generateRoute,
+                initialRoute:RoutesName.Splash ,
+                onGenerateRoute: Routes.generateRoute,
               );
             },
           ),
