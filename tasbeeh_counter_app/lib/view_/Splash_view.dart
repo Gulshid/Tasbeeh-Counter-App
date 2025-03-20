@@ -34,6 +34,7 @@ class _SplashViewState extends State<SplashView> {
         children: [
           //Splash App Image in top center
           ClipRRect(
+            borderRadius: BorderRadius.circular(25.r),
             child: Image.asset(
               'assets/tasbeeh.png',
               height: 120.h,
