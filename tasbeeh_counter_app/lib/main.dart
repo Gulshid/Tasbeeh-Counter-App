@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:tasbeeh_counter_app/Services_/HIve_database.dart';
 import 'package:tasbeeh_counter_app/Utils_/Routes/Routes.dart';
 import 'package:tasbeeh_counter_app/Utils_/Routes/Routes_name.dart';
 import 'package:tasbeeh_counter_app/View_Model/TasbCount_Provider.dart';
 
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await HiveDatabase.init();
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {

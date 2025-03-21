@@ -50,7 +50,7 @@ class _SplashViewState extends State<SplashView> {
             ),
           ),
 
-          SpinKitChasingDots(color: Colors.green, size: 50.sp),
+          SpinKitDancingSquare(color: Colors.green, size: 50.sp),
         ],
       ),
     );
