@@ -13,12 +13,13 @@ void main() async{
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
+  
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(360, 690),
+      designSize: getdesignSize(context),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
@@ -47,5 +48,18 @@ class MyApp extends StatelessWidget {
         );
       },
     );
+  }
+}
+
+
+Size getdesignSize(BuildContext context) {
+  double width = MediaQuery.of(context).size.width;
+
+  if (width < 600) {
+    return Size(360, 690);
+  } else if (width < 1200) {
+    return Size(834, 1194);
+  } else {
+    return Size(1440, 1024);
   }
 }

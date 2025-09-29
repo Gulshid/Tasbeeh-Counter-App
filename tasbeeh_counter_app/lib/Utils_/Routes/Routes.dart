@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:tasbeeh_counter_app/Utils_/Routes/Routes_name.dart';
 import 'package:tasbeeh_counter_app/view_/Splash_view.dart';
 import 'package:tasbeeh_counter_app/view_/home_view.dart';
